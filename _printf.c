@@ -2,12 +2,12 @@
 #include <unistd.h>
 #include "main.h"
 /**
-  * find_function - function that finds formats for _printf
+  * percent_function - function that finds formats for _printf
   * calls the corresponding function.
   * @format: format (char, string, int, decimal)
   * Return: NULL or function associated ;
   */
-int (*find_function(const char *format))(va_list)
+int (*percent_function(const char *format))(va_list)
 {
 	unsigned int i = 0;
 	code_f find_f[] = {
@@ -33,13 +33,13 @@ int (*find_function(const char *format))(va_list)
   */
 int _printf(const char *format, ...)
 {
-	va_list ap;
+	va_list valist;
 	int (*f)(va_list);
 	unsigned int i = 0, cprint = 0;
 
 	if (format == NULL)
 		return (-1);
-	va_start(ap, format);
+	va_start(valist, format);
 	while (format[i])
 	{
 		while (format[i] != '%' && format[i])
@@ -50,10 +50,10 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '\0')
 			return (cprint);
-		f = find_function(&format[i + 1]);
+		f = percent_function(&format[i + 1]);
 		if (f != NULL)
 		{
-			cprint += f(ap);
+			cprint += f(valist);
 			i += 2;
 			continue;
 		}
@@ -66,6 +66,6 @@ int _printf(const char *format, ...)
 		else
 			i++;
 	}
-	va_end(ap);
+	va_end(valist);
 	return (cprint);
 }
