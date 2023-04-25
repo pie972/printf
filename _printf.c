@@ -10,7 +10,7 @@
 int (*find_function(const char *format))(va_list)
 {
 	unsigned int i = 0;
-	format_t find_f[] = {
+	code_format find_f[] = {
 		{"%", percent_setter},
 		{"c", char_setter},
     		{"s", string_setter},
