@@ -1,6 +1,17 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+/**
+ * percent_setter - %
+ *
+ * Return: 1.
+ */
+int percent_setter(__attribute__((unused))va_list valist)
+{
+	_putchar('%');
+	return (1);
+}
 /**
  * print_string - writes the character c to stdout
  * @s: The string to print
@@ -25,8 +36,8 @@ int string_setter(va_list valist)
 	return (i);
 }
 /**
- * print_char - writes the character c to stdout
- * @c: The character to print
+ * char_setter - writes the character c to stdout
+ * @valist: The character to print
  *
  * Return: 1.
  */
@@ -36,8 +47,8 @@ int char_setter(va_list valist)
 	return (1);
 }
 /**
-* print_int - function that prints an integer
-* @i: integer to print
+* int_setter - function that prints an integer
+* @valist: integer to print
 * Descriptions: prints digit with _putchar
 * Return: size the output text
 */
@@ -83,8 +94,8 @@ int int_setter(va_list valist)
 	return (count);
 }
 /**
-* print_dec - function that prints an decimal
-* @d: integer to print
+* dec_setter - function that prints an decimal
+* @valist: integer to print
 * Descriptions: prints digit with _putchar
 * Return: size the output text
 */
