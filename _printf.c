@@ -10,17 +10,17 @@
 int (*percent_function(const char *format))(va_list)
 {
 	unsigned int i = 0;
-	code_f find_f[] = {
-    {"s", string_setter},
+	format_t find_f[] = {
+    		{"s", string_setter},
 		{"c", char_setter},
 		{"i", integer_setter},
 		{"d", decimal_setter},
 		{NULL, NULL}
 	};
 
-	while (find_f[i].sc)
+	while (find_f[i].opt)
 	{
-		if (find_f[i].sc[0] == (*format))
+		if (find_f[i].opt[0] == (*format))
 			return (find_f[i].f);
 		i++;
 	}
