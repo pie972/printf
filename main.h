@@ -19,8 +19,6 @@ int string_setter(va_list valist);
 int dec_setter(va_list valist);
 int int_setter(va_list valist);
 
-/* utils.c */
-//int _strlen(const char *);
 
 /**
   * struct format - Typedef struct
