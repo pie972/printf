@@ -15,7 +15,8 @@ int _printf(const char *format, ...);
 /* printers */
 int string_setter(va_list valist);
 int char_setter(va_list valist);
-int decimal_setter(va_list valist);
+int int_setter(va_list valist);
+int dec_setter(va_list valist);
 
 /* utils.c */
 int _strlen(const char *);
