@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdarg.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,6 +12,10 @@ int _putchar(char c);
 
 /* printf.c */
 int _printf(const char *format, ...);
+
+/* handler.c */
+int handler(const char *, va_list);
+int percent_handler(const char *, va_list, int *);
 
 /* printers */
 int percent_setter(__attribute__((unused))va_list valist);
