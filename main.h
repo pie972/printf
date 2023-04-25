@@ -20,10 +20,10 @@ int dec_setter(va_list valist);
 int int_setter(va_list valist);
 
 /* utils.c */
-int _strlen(const char *);
+//int _strlen(const char *);
 
 /**
-  * struct code_format - Struct format
+  * struct format - Typedef struct
   *
   * @opt: The specifiers
   * @f: The function associated
@@ -32,6 +32,6 @@ typedef struct format
 {
 	char *opt;
 	int (*f)(va_list);
-} format_t;
+} code_format;
 
 #endif /* MAIN */
