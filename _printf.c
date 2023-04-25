@@ -13,7 +13,7 @@ int (*find_function(const char *format))(va_list)
 	code_format find_f[] = {
 		{"%", percent_setter},
 		{"c", char_setter},
-    		{"s", string_setter},
+		{"s", string_setter},
 		{"d", dec_setter},
 		{"i", int_setter},
 		{NULL, NULL}
