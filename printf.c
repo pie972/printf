@@ -19,8 +19,8 @@ int (*find_function(const char *format))(va_list)
 		{"b", bin_setter},
 		{"u", unsig_setter},
 		{"o", octal_setter},
-		{"x", x__setter},
-		{"X", X__setter},
+		{"x", hex_low_setter},
+		{"X", hex_upp_setter},
 		{NULL, NULL}
 	};
 
