@@ -267,7 +267,7 @@ int print_hex(unsigned int n, unsigned int c)
  *
  * Return: Length of the number
  **/
-int hex_low_setter(va_list list)
+int hex_low_setter(va_list valist)
 {
 	char *p_buff;
 	int size;
@@ -286,24 +286,5 @@ int hex_low_setter(va_list list)
  **/
 int hex_upp_setter(va_list valist)
 {
-	return (print_hex(va_arg(valist unsigned int), 1));
+	return (print_hex(va_arg(valist, unsigned int), 1));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
