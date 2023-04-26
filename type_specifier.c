@@ -323,7 +323,7 @@ int rev_string_setter(va_list valist)
 	char *st;
 	int i, j = 0;
 
-	st = va_arg(r, char *);
+	st = va_arg(valist, char *);
 	if (st == NULL)
 		st = ")llun(";
 	for (i = 0; st[i] != '\0'; i++)
