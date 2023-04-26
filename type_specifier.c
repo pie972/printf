@@ -6,8 +6,8 @@
 /**
  * percent_setter - %
  * @valist: The percent % to print
- *
- * Return: 1.
+ * Descriptions: prints percent
+ * Return: 1;
  */
 int percent_setter(__attribute__((unused))va_list valist)
 {
@@ -18,7 +18,7 @@ int percent_setter(__attribute__((unused))va_list valist)
  * char_setter - writes the character c to stdout
  * @valist: The character to print
  *
- * Return: 1.
+ * Return: 1;
  */
 int char_setter(va_list valist)
 {
@@ -29,13 +29,14 @@ int char_setter(va_list valist)
  * string_setter - writes the string s to stdout
  * @valist: The string to print
  *
- * Return: 1.
+ * Return: 1;
  */
 int string_setter(va_list valist)
 {
 	char *str;
 	int  i = 0;
 	str = va_arg(valist, char *);
+	
 	if (str == NULL)
 		str = "(null)";
 	while (str[i])
@@ -49,12 +50,12 @@ int string_setter(va_list valist)
 * dec_setter - function that prints an decimal
 * @valist: The integer to print
 * Descriptions: prints digit with _putchar
-* Return: size the output text
+* Return: size the output text;
 */
 int dec_setter(va_list valist)
 {
 	int len, powten, j, digit, n, count = 0, num;
-
+	
 	n = va_arg(valist, int);
 	if (n != 0)
 	{
@@ -96,7 +97,7 @@ int dec_setter(va_list valist)
 * int_setter - function that prints an integer
 * @valist: integer to print
 * Descriptions: prints digit with _putchar
-* Return: size the output text
+* Return: size the output text;
 */
 int int_setter(va_list valist)
 {
@@ -142,7 +143,7 @@ int int_setter(va_list valist)
 /**
 * bin_setter - convert to binary
 * @valist: number in decinal
-* Return: number of chars printed
+* Return: number of chars printed;
 */
 int bin_setter(va_list valist)
 {
@@ -159,7 +160,7 @@ int bin_setter(va_list valist)
  * unsig_setter - Print a unsigned int
  * @valist: Number to print
  *
- * Return: Length of the number
+ * Return: Length of the number;
  */
 int unsig_setter(va_list valist)
 {
@@ -199,7 +200,7 @@ int unsig_setter(va_list valist)
  * octal_setter - Print a unsigned octal
  * @valist: Number to print
  *
- * Return: Length of the number
+ * Return: Length of the number;
  */
 int octal_setter(va_list valist)
 {
@@ -217,7 +218,7 @@ int octal_setter(va_list valist)
 * @n: unsigned to be printed
 * @c: case of printing (0 = lower, 1 = upper)
 * Descriptions: prints unsigned in hexadecimal with _putchar
-* Return: size the output
+* Return: size the output;
 */
 int print_hex(unsigned int n, unsigned int c)
 {
@@ -264,7 +265,7 @@ int print_hex(unsigned int n, unsigned int c)
  * hex_low_setter - Print a number in hexadecimal format
  * @valist: Number to print
  *
- * Return: Length of the number
+ * Return: Length of the number;
  */
 int hex_low_setter(va_list valist)
 {
@@ -281,7 +282,7 @@ int hex_low_setter(va_list valist)
  * hex_upp_setter - Print a number in hexadecimal format
  * @valist: Number to print
  *
- * Return: Length of the number
+ * Return: Length of the number;
  **/
 int hex_upp_setter(va_list valist)
 {
