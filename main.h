@@ -31,6 +31,7 @@ int rot_setter(va_list valist);
 /* utils.c */
 int print(char *);
 char *itoa(long int, int);
+int _strcmp(char *, char *);
 
 /**
   * struct format - Typedef struct
