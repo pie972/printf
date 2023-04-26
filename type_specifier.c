@@ -24,8 +24,8 @@ int char_setter(va_list valist)
 	return (1);
 }
 /**
- * print_string - writes the character c to stdout
- * @s: The string to print
+ * string_setter - writes the character c to stdout
+ * @valist: The string to print
  *
  * Return: 1.
  */
@@ -36,9 +36,9 @@ int string_setter(va_list valist)
 
 	str = va_arg(valist, char *);
 	if (str == NULL)
-  {
+  	{
  		str = "(null)";
-  }
+  	}
 	while (str[i])
 	{
 		_putchar(str[i]);
