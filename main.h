@@ -20,6 +20,9 @@ int string_setter(va_list valist);
 int dec_setter(va_list valist);
 int int_setter(va_list valist);
 
+/* utils.c */
+int print(char *);
+char *itoa(long int, int);
 
 /**
   * struct format - Typedef struct
