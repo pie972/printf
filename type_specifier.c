@@ -36,7 +36,7 @@ int string_setter(va_list valist)
 
 	str = va_arg(valist, char *);
 	if (str == NULL)
- 		str = "(null)";
+		str = "(null)";
 	while (str[i])
 	{
 		_putchar(str[i]);
