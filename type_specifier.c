@@ -102,7 +102,7 @@ int int_setter(va_list valist)
 {
 	int len, powten, j, digit, n, count = 0, num;
 
-	n = va_arg(i, int);
+	n = va_arg(valist, int);
 	if (n != 0)
 	{
 		if (n < 0)
