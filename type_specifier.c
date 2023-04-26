@@ -5,7 +5,7 @@
 
 /**
  * percent_setter - %
- * @valist: %
+ * @valist: The percent % to print
  *
  * Return: 1.
  */
@@ -26,7 +26,7 @@ int char_setter(va_list valist)
 	return (1);
 }
 /**
- * string_setter - writes the character c to stdout
+ * string_setter - writes the string s to stdout
  * @valist: The string to print
  *
  * Return: 1.
@@ -38,7 +38,9 @@ int string_setter(va_list valist)
 
 	str = va_arg(valist, char *);
 	if (str == NULL)
+	{
 		str = "(null)";
+	}
 	while (str[i])
 	{
 		_putchar(str[i]);
