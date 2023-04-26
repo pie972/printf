@@ -288,3 +288,50 @@ int hex_upp_setter(va_list valist)
 {
 	return (print_hex(va_arg(valist, unsigned int), 1));
 }
+/**
+ * pointer_setter - Print a number in hexadecimal format
+ * @valist: Number to print
+ *
+ * Return: Length of the number
+ **/
+int pointer_setter(va_list valist)
+{
+	char *p_buff;
+	int size;
+
+	p_buff = itoa(va_arg(valist, unsigned long int), 16);
+
+	if (!_strcmp(p_buff, "0"))
+		return (print("(nil)"));
+
+	size = print("0x");
+
+	if (!_strcmp(p_buff, "-1"))
+		size += print("ffffffffffffffff");
+	else
+		size += print(p_buff);
+
+	return (size);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
