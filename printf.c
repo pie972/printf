@@ -16,6 +16,14 @@ int (*find_function(const char *format))(va_list)
 		{"s", string_setter},
 		{"d", dec_setter},
 		{"i", int_setter},
+		{"b", bin_setter},
+		{"u", unsig_setter},
+		{"o", octal_setter},
+		{"x", hex_low_setter},
+		{"X", hex_upp_setter},
+		{"p", pointer_setter},
+		{"r", rev_string_setter},
+		{"R", rot_setter},
 		{NULL, NULL}
 	};
 
