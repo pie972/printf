@@ -5,8 +5,8 @@
 
 /**
  * percent_setter - %
- * @valist: The percent % to print
- * Descriptions: prints percent
+ * @valist: The percent to print
+ * 
  * Return: 1;
  */
 int percent_setter(__attribute__((unused))va_list valist)
@@ -28,7 +28,7 @@ int char_setter(va_list valist)
 /**
  * string_setter - writes the string s to stdout
  * @valist: The string to print
- *
+ * Descriptions: prints string
  * Return: 1;
  */
 int string_setter(va_list valist)
