@@ -8,7 +8,7 @@
  * @valist: %
  *
  * Return: 1.
- */
+ **/
 int percent_setter(__attribute__((unused))va_list valist)
 {
 	_putchar('%');
@@ -19,7 +19,7 @@ int percent_setter(__attribute__((unused))va_list valist)
  * @valist: The character to print
  *
  * Return: 1.
- */
+ **/
 int char_setter(va_list valist)
 {
 	_putchar(va_arg(valist, int));
@@ -30,7 +30,7 @@ int char_setter(va_list valist)
  * @valist: The string to print
  *
  * Return: 1.
- */
+ **/
 int string_setter(va_list valist)
 {
 	char *str;
