@@ -336,31 +336,45 @@ int rev_string_setter(va_list valist)
 	return (j);
 }
 /**
+ * rot13 - Encodes a string using rot13.
+ * @s: String to enconde
+ * Return: String encode
+ */
+int rot13(char *s)
+{
+	int i, j;
+	char *input, *rot13;
+
+	input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; input[j] != '\0'; j++)
+		{
+			if (s[i] == input[j])
+			{
+				_putchar(output[j]);
+				break;
+			}
+		}
+
+		if (!input[j])
+			_putchar(s[i]);
+	}
+	return (i);
+}
+/**
   * rot_setter - encodes a string into rot13.
   * @valist: string to convert
   * Return: size the output text;
   */
 int rot_setter(va_list valist)
 {
-	int j, i, count = 0;
-	char *r;
-	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz";
-	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLM nopqrstuvwxyzabcdefghijklm";
+	char *p;
+	int p_len;
 
-	r = va_arg(valist, char *);
-	if (r == NULL)
-		r = "(null)";
-	for (j = 0; r[j] != '\0'; j++)
-	{
-		for (i = 0; input[i] != '\0'; i++)
-		{
-			if (r[j] == input[i])
-			{
-				_putchar(output[i]);
-				count++;
-				break;
-			}
-		}
-	}
-	return (count);
+	p = va_arg(list, char *);
+	p_len = rot13((p != NULL) ? p : "(ahyy)");
+
+	return (p_len);
 }
