@@ -343,7 +343,7 @@ int rev_string_setter(va_list valist)
 int rot13(char *s)
 {
 	int i, j;
-	char *input, *rot13;
+	char *input, *output;
 
 	input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
@@ -373,7 +373,7 @@ int rot_setter(va_list valist)
 	char *p;
 	int p_len;
 
-	p = va_arg(list, char *);
+	p = va_arg(valist, char *);
 	p_len = rot13((p != NULL) ? p : "(ahyy)");
 
 	return (p_len);
