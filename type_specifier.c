@@ -4,6 +4,7 @@
 
 /**
  * percent_setter - %
+ * @valist: %
  *
  * Return: 1.
  */
@@ -46,7 +47,7 @@ int string_setter(va_list valist)
 }
 /**
 * dec_setter - function that prints an decimal
-* @valist: integer to print
+* @valist: The integer to print
 * Descriptions: prints digit with _putchar
 * Return: size the output text
 */
