@@ -16,6 +16,7 @@ int (*find_function(const char *format))(va_list)
 		{"s", string_setter},
 		{"d", dec_setter},
 		{"i", int_setter},
+		{"b", bin_setter},
 		{NULL, NULL}
 	};
 
