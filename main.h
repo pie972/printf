@@ -13,10 +13,6 @@ int _putchar(char c);
 /* printf.c */
 int _printf(const char *format, ...);
 
-/* handler.c */
-int handler(const char *, va_list);
-int percent_handler(const char *, va_list, int *);
-
 /* printers */
 int percent_setter(__attribute__((unused))va_list valist);
 int char_setter(va_list valist);
