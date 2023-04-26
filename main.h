@@ -24,6 +24,9 @@ int unsig_setter(va_list valist);
 int octal_setter(va_list valist);
 int hex_low_setter(va_list valist);
 int hex_upp_setter(va_list valist);
+int pointer_setter(va_list valist);
+int rev_string_setter(va_list valist);
+int rot_setter(va_list valist);
 
 /* utils.c */
 int print(char *);
