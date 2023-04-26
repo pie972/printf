@@ -292,7 +292,7 @@ int hex_upp_setter(va_list valist)
  * pointer_setter - Print a number in hexadecimal format
  * @valist: Number to print
  *
- * Return: Length of the number
+ * Return: Length of the number;
  **/
 int pointer_setter(va_list valist)
 {
@@ -313,25 +313,54 @@ int pointer_setter(va_list valist)
 
 	return (size);
 }
+/**
+* rev_string_setter - prints astring in reverse
+* @valist: string to print
+* Return: number of chars printed;
+*/
+int rev_string_setter(va_list valist)
+{
+	char *st;
+	int i, j = 0;
 
+	st = va_arg(r, char *);
+	if (st == NULL)
+		st = ")llun(";
+	for (i = 0; st[i] != '\0'; i++)
+		;
+	for (i -= 1 ; i >= 0; i--)
+	{
+		_putchar(st[i]);
+		j++;
+	}
+	return (j);
+}
+/**
+  * rot_setter - encodes a string into rot13.
+  * @valist: string to convert
+  * Return: size the output text;
+  */
+int rot_setter(va_list valist)
+{
+	int j, i, count = 0;
+	char *r;
+	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz";
+	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLM nopqrstuvwxyzabcdefghijklm";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	r = va_arg(valist, char *);
+	if (r == NULL)
+		r = "(null)";
+	for (j = 0; r[j] != '\0'; j++)
+	{
+		for (i = 0; input[i] != '\0'; i++)
+		{
+			if (r[j] == input[i])
+			{
+				_putchar(output[i]);
+				count++;
+				break;
+			}
+		}
+	}
+	return (count);
+}
