@@ -53,8 +53,7 @@ int string_setter(va_list valist)
 */
 int dec_setter(va_list valist)
 {
-	int len, powten, j, digit, n, count = 0;
-  	unsigned int num;
+	int len, powten, j, digit, n, count = 0, num;
 
 	n = va_arg(valist, int);
 	if (n != 0)
