@@ -8,7 +8,7 @@
  * @valist: %
  *
  * Return: 1.
- **/
+ */
 int percent_setter(__attribute__((unused))va_list valist)
 {
 	_putchar('%');
@@ -19,7 +19,7 @@ int percent_setter(__attribute__((unused))va_list valist)
  * @valist: The character to print
  *
  * Return: 1.
- **/
+ */
 int char_setter(va_list valist)
 {
 	_putchar(va_arg(valist, int));
@@ -30,7 +30,7 @@ int char_setter(va_list valist)
  * @valist: The string to print
  *
  * Return: 1.
- **/
+ */
 int string_setter(va_list valist)
 {
 	char *str;
@@ -161,7 +161,7 @@ int bin_setter(va_list valist)
  * @valist: Number to print
  *
  * Return: Length of the number
- **/
+ */
 int unsig_setter(va_list valist)
 {
 	unsigned int len, powten, j, digit, n, num;
@@ -201,7 +201,7 @@ int unsig_setter(va_list valist)
  * @valist: Number to print
  *
  * Return: Length of the number
- **/
+ */
 int octal_setter(va_list valist)
 {
 	char *p_buff;
@@ -266,7 +266,7 @@ int print_hex(unsigned int n, unsigned int c)
  * @valist: Number to print
  *
  * Return: Length of the number
- **/
+ */
 int hex_low_setter(va_list valist)
 {
 	char *p_buff;
