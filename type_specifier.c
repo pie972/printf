@@ -289,6 +289,41 @@ int hex_upp_setter(va_list valist)
 	return (print_hex(va_arg(valist, unsigned int), 1));
 }
 /**
+* String_setter - print value of not printable char
+* @valist: string
+* Return: length of the string
+*/
+int String_setter(va_list valist)
+{
+	int i = 0;
+	int size = 0;
+	unsigned char *str;
+
+	str = va_arg(valist, unsigned char *);
+	if (str == NULL)
+	{
+		_putstr("\\x00");
+		return (4);
+	}
+	while (str[i])
+	{
+		if ((str[i] < 32 || str[i] >= 127) && str[i])
+		{
+			_putstr("\\x");
+			hex_upp_setter(str[i], &size);
+			size += 2;
+			i++;
+		}
+		else
+		{
+			_putchar(str[i]);
+			i++;
+			size++;
+		}
+	}
+	return (size);
+}
+/**
  * pointer_setter - Print a number in hexadecimal format
  * @valist: Number to print
  *
