@@ -70,7 +70,6 @@ int _strcmp(char *s1, char *s2)
 * @str: string
 * Return: noting
 */
-
 void _putstr(char *str)
 {
 	unsigned int i;
