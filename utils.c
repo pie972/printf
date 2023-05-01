@@ -65,3 +65,20 @@ int _strcmp(char *s1, char *s2)
 
 	return (0);
 }
+/**
+* _putstr - print a string in stdout
+* @str: string
+* Return: noting
+*/
+
+void _putstr(char *str)
+{
+	unsigned int i;
+
+	i = 0;
+	while (str[i])
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}
