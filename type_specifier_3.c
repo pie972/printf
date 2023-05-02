@@ -25,7 +25,7 @@ int String_setter(va_list valist)
 		if ((str[i] < 32 || str[i] >= 127) && str[i])
 		{
 			_putstr("\\x");
-			hex_upp_setter(str[i], &size);
+			hex_S(str[i], &size);
 			size += 2;
 			i++;
 		}
