@@ -34,6 +34,8 @@ int print(char *);
 char *itoa(long int, int);
 int _strcmp(char *, char *);
 void _putstr(char *str);
+void hex_S(unsigned int nb, int *size);
+void hex_up(unsigned int nb, int *size);
 
 /**
   * struct format - Typedef struct
