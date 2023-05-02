@@ -24,6 +24,7 @@ int unsig_setter(va_list valist);
 int octal_setter(va_list valist);
 int hex_low_setter(va_list valist);
 int hex_upp_setter(va_list valist);
+int String_setter(va_list valist);
 int pointer_setter(va_list valist);
 int rev_string_setter(va_list valist);
 int rot_setter(va_list valist);
@@ -32,6 +33,7 @@ int rot_setter(va_list valist);
 int print(char *);
 char *itoa(long int, int);
 int _strcmp(char *, char *);
+void _putstr(char *str);
 
 /**
   * struct format - Typedef struct

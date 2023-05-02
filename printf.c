@@ -21,6 +21,7 @@ int (*find_function(const char *format))(va_list)
 		{"o", octal_setter},
 		{"x", hex_low_setter},
 		{"X", hex_upp_setter},
+		{"S", String_setter},
 		{"p", pointer_setter},
 		{"r", rev_string_setter},
 		{"R", rot_setter},
