@@ -6,7 +6,6 @@
 /**
  * percent_setter - %
  * @valist: The percent to print
- * 
  * Return: 1;
  */
 int percent_setter(__attribute__((unused))va_list valist)
@@ -36,7 +35,6 @@ int string_setter(va_list valist)
 	char *str;
 	int  i = 0;
 	str = va_arg(valist, char *);
-	
 	if (str == NULL)
 		str = "(null)";
 	while (str[i])
