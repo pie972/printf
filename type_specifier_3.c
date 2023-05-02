@@ -1,3 +1,8 @@
+#include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
 * String_setter - print value of not printable char
 * @valist: string
