@@ -35,6 +35,7 @@ int string_setter(va_list valist)
 	char *str;
 	int  i = 0;
 	str = va_arg(valist, char *);
+	
 	if (str == NULL)
 		str = "(null)";
 	while (str[i])
@@ -53,8 +54,8 @@ int string_setter(va_list valist)
 int dec_setter(va_list valist)
 {
 	int len, powten, j, digit, n, count = 0, num;
-	
 	n = va_arg(valist, int);
+	
 	if (n != 0)
 	{
 		if (n < 0)
